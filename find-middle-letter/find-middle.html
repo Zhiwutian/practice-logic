@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function findMiddleLetters (string) {
+            var length = string.length;
+            if (length % 2 === 0) {
+                console.log("even");
+                var evenStringIndex = (length / 2) - 1;
+                console.log("even string index", evenStringIndex);
+                return string.substr(evenStringIndex, 2)
+
+            } else {
+                console.log("odd");
+                var oddStringIndex = Math.floor(length / 2);
+                console.log("string index", oddStringIndex);
+                return string[oddStringIndex];
+            }
+
+        }
+
+        var middleLetters1 = findMiddleLetters("four");
+
+        console.log("middleLetters1", middleLetters1);
+
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
