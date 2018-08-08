@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function doMath (number1, number2, operator) {
+            var result = null;
+            if (operator === "+") {
+                result = number1 + number2
+            } else if (operator === "-") {
+                result = number1 - number2
+            } else if (operator === "*" || operator === "x" || operator === "X") {
+                result = number1 * number2
+            } else if (operator === "/") {
+                result = number1 / number2
+            }
+            return result
+        }
+
+        var mathResult = doMath(4,7,"X");
+        console.log("Do math result", mathResult);
+
+        function doMathWithSwitch (number1, number2, operator) {
+            var result = null;
+            switch (operator) {
+                case "+":
+                    result = number1 + number2;
+                    break;
+                case "-":
+                    result = number1 - number2;
+                    break;
+                case "*":
+                    result = number1 * number2;
+                    break;
+                case "X":
+                    result = number1 * number2;
+                    break;
+                case "x":
+                    result = number1 * number2;
+                    break;
+                case "/":
+                    result = number1 / number2;
+                    break;
+                default:
+                    console.log("operator input error");
+            }
+            return result;
+        }
+        var mathSwitchResult = doMathWithSwitch(62, 71, "-");
+        console.log("Math with switch result", mathSwitchResult)
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
