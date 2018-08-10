@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function randomRange (startNum, endNum) {
+            if (Array.isArray(startNum) && !endNum) {
+                const randomArrayIndex = Math.floor(Math.random() * startNum.length);
+                return startNum[randomArrayIndex];
+            }
+
+            const randomNumber = Math.floor(Math.random() * (endNum - startNum + 1)) + startNum;
+            return randomNumber;
+
+        }
+
+
+        const randomTest1 = randomRange(2, 15);
+        const randomTest2 = randomRange(1, 100);
+        const randomTest3 = randomRange(["a","b","c","d","e"]);
+
+        console.log(randomTest1);
+        console.log(randomTest2);
+        console.log(randomTest3);
+
+
+    </script>
+</head>
+<body>
+<!--Build a function, random_range, that takes 2 parameters, start_num and end_num. OPTIONALLY: If start_num is an array instead (and end_num isn't specified), then it returns a random element from the array-->
+
+<!--Example:-->
+<!--random_range(2,15)-->
+<!--returns 7-->
+<!--random_range(1,100)-->
+<!--returns 85-->
+<!--random_range(['a','b','c','d','e'])-->
+<!--returns 'b'-->
+
+</body>
+</html>
