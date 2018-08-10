@@ -7,7 +7,28 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
     <script>
-        
+
+        function randomRange (startNum, endNum) {
+            if (Array.isArray(startNum) && !endNum) {
+                const randomArrayIndex = Math.floor(Math.random() * startNum.length);
+                return startNum[randomArrayIndex];
+            }
+
+            const randomNumber = Math.floor(Math.random() * (endNum - startNum + 1)) + startNum;
+            return randomNumber;
+
+        }
+
+
+        const randomTest1 = randomRange(2, 15);
+        const randomTest2 = randomRange(1, 100);
+        const randomTest3 = randomRange(["a","b","c","d","e"]);
+
+        console.log(randomTest1);
+        console.log(randomTest2);
+        console.log(randomTest3);
+
+
     </script>
 </head>
 <body>
