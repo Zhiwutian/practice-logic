@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        function cocococombomath (num1, num2, num3, num4, num5) {
+            const multiplied = num1 * num2;
+            const added = multiplied + num3;
+            const divided = added / num4;
+            const subtracted = divided - num5;
+            return subtracted.toFixed(2);
+
+        }
+
+        console.log("test 1", cocococombomath(5, 14, 16, 21, 4));
+        console.log("test 2", cocococombomath(5, 10, 23, 32, 5));
+
+        function cocococombomathOneLine (num1, num2, num3, num4, num5) {
+            return ((((num1 * num2) + num3) / num4) - num5).toFixed(2);
+
+        }
+
+        console.log ("test 3", cocococombomathOneLine(5, 14, 16, 21, 4));
+
+
+
+
+    </script>
+</head>
+<body>
+
+<!--Build a function, cocococombomath, that takes 5 numbers as parameters.-->
+<!--It: - multiplies the 1st number x the 2nd number - the result of that, it adds the 3rd number - the result of that, it divides by the 4th number - the result of that, it subtracts the 5th number - it returns that result-->
+
+<!--example:-->
+<!--cocococombomath(3,2,6,3,5)-->
+<!--Returns -1-->
+</body>
+</html>
