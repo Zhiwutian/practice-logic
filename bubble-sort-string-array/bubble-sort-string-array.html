@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+                function bubbleSortStringArray(array) {
+                    debugger;
+                    let swapString;
+                    let arrayLength = array.length-1;
+                    let sortedArray = array;
+                    do {
+                        swapString = false;
+                        for (let i=0; i<arrayLength; i++) {
+                            if(sortedArray[i] > sortedArray[i+1]) {
+                                let tempStorage = sortedArray[i];
+                                sortedArray[i] = sortedArray[i+1];
+                                sortedArray[i+1] = tempStorage;
+                                swapString = true;
+                            }
+                        }
+                        arrayLength--;
+                    } while (swapString);
+                    return sortedArray;
+                }
+
+                console.log("bubbleSortStringArray", bubbleSortStringArray(["hey", "this", "is", "an", "unordered", "string"]));
+
+
+
+    </script>
+</head>
+<body>
+
+<!--Build a function that takes in an array of strings and outputs a new array with the same strings in alphabetical order.-->
+
+<!--Write a function that takes one parameter-->
+<!--Parameter 1 - An Array of strings-->
+<!--The function should output an array containing all the strings from the input array but in alphabetical order-->
+<!--Example: -var myArray = ['mouse', 'cat', 'dog', 'human'];-->
+<!--sort(myArray);-->
+<!--Output - ['cat', 'dog', 'human', 'mouse']-->
+<!--bubble-sort: https://www.google.com/-->
+
+</body>
+</html>
