@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        function arrayDataSort (arrayToSort) {
+            const arrayToReturn = [];
+            const numberArray = [];
+            const stringArray = [];
+            const booleanArray = [];
+            const objectArray = [];
+            for (let i=0; i<arrayToSort.length; i++) {
+             switch (typeof arrayToSort[i]) {
+                 case "string":
+                     stringArray.push(arrayToSort[i]);
+                     break;
+                 case "number":
+                     numberArray.push(arrayToSort[i]);
+                     break;
+                 case "boolean":
+                     booleanArray.push(arrayToSort[i]);
+                     break;
+                 case "object":
+                     objectArray.push(arrayToSort[i]);
+                     break;
+                 default:
+                     console.log("input datatype unrecognized");
+             }
+            }
+            arrayToReturn.push(numberArray, stringArray, booleanArray, objectArray);
+
+            return arrayToReturn;
+        }
+
+        console.log(arrayDataSort([3, true, "hey", 5, false, "you", {name:"John"}]));
+
+    </script>
+</head>
+<body>
+<!--Build a function that sorts an array into a multidimensional array grouped by data type-->
+
+<!--Write a function that takes one parameter-->
+<!--Parameter 1 - An array of anything-->
+<!--The function should output a multidimensional array grouped by data type-->
+<!--Example:-->
+<!--var myArray = ['hello', 34, true, false, 'goodbye', 56, 12, '25', true];-->
+<!--groupArray(myArray);-->
+<!--Output - [['hello, 'goodbye', '25'], [34, 56, 12], [true, false, true]]-->
+
+</body>
+</html>
