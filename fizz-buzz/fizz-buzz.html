@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+
+        function fizzBizz () {
+            const fizzBizzArray = [];
+            for (let i=1; i<=100; i++ ) {
+                if (i % 3 === 0 && i % 5 === 0) {
+                    fizzBizzArray.push("fizzBuzz")
+                } else if (i % 3 === 0 ) {
+                    fizzBizzArray.push("Fizz");
+                } else if (i % 5 === 0 ) {
+                    fizzBizzArray.push("Buzz")
+
+                } else {
+                    fizzBizzArray.push(i);
+
+                }
+            }
+            return fizzBizzArray;
+        }
+
+        console.log("fizzBizz Array", fizzBizz());
+
+        function fizzBuzz () {
+            const fizzBuzzArray = [];
+            for (let i=1; i<=100; i++ ) {
+                if (i % 3 === 0) {
+                    if (i % 5 === 0) {
+                        fizzBuzzArray.push("fizzBuzz");
+                    }
+                    fizzBuzzArray.push("Fizz");
+                } else if (i % 5 === 0) {
+                    fizzBuzzArray.push("Buzz");
+                } else {
+                    fizzBuzzArray.push(i);
+                }
+            }
+            return fizzBuzzArray;
+        }
+
+        console.log("fizzBuzz Array", fizzBuzz());
+
+    </script>
+</head>
+<body>
+
+<!--Build a function that prints the numbers from 1 to 100. But for multiples of three print “Fizz” instead of the number and for the multiples of five print “Buzz”. For numbers which are multiples of both three and five print “FizzBuzz”.-->
+
+<!--Write a function that takes no parameters-->
+<!--The function should output the numbers 1 through 100, following the rules from abovez-->
+
+</body>
+</html>
