@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+
+        function fibonacciGenerator(lengthOfSequence){
+            const fibonacciSequence = [0,1];
+
+            for (let i = 0; i<lengthOfSequence-2 ; i++) {
+                const numberToPush = fibonacciSequence[i] + fibonacciSequence[i+1];
+                fibonacciSequence.push(numberToPush);
+            }
+            return fibonacciSequence;
+
+        }
+
+        console.log(fibonacciGenerator(28));
+
+
+        function recursiveFibonacciGenerator(lengthOfSequence) {
+            if (lengthOfSequence <=1) return 1;
+
+            return recursiveFibonacciGenerator(lengthOfSequence-1) + recursiveFibonacciGenerator(lengthOfSequence-2);
+        }
+
+
+        console.log("recursive Fibonacci function", recursiveFibonacciGenerator(10));
+    </script>
+</head>
+<body>
+
+
+<!--Build a function that takes one parameter and prints out the Fibonacci sequence based on the input parameter.-->
+
+<!--Write a function that takes one parameter-->
+<!--Parameter 1 - A number-->
+<!--The function should output the Fibonacci sequence to the number of spaces set by parameter 1 starting from zero.-->
+<!--Example:-->
+<!--fibSequence(12);-->
+<!--Output - 0 1 1 2 3 5 8 13 21 34 55 89-->
+<!--If you are unfamiliar with the Fibonacci sequence Click Here-->
+
+</body>
+</html>
