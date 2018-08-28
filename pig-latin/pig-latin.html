@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+        function pigLatinGenerator (stringToConvert) {
+            const splitStringArray = stringToConvert.split(" ");
+            const convertedArray = [];
+
+            for (let i=0; i<splitStringArray.length; i++) {
+                // debugger;
+                const tempArray = splitStringArray[i].split("");
+                const firstLetter = tempArray.shift();
+                tempArray.push(firstLetter +"ay");
+                const joinedTempArray = tempArray.join("");
+                convertedArray.push(joinedTempArray);
+
+            }
+            const convertedString = convertedArray.join(" ");
+            return convertedString;
+
+        }
+
+        console.log("function test", pigLatinGenerator("there can be only one"));
+
+    </script>
+
+
+
+</head>
+<body>
+<!--Igpay Atinlay-->
+<!--Build a function that will translate text into "Pig Latin" Take the first consonant and move it to the end of a word and then affix "ay" to the end of that word."-->
+
+<!--Write a function that takes one parameter-->
+<!--Parameter 1 - A string-->
+<!--The function should output your input string translated into Pig Latin-->
+<!--Example:-->
+<!--var myString = "Hello my name is Stu"-->
+<!--`translate(myString);-->
+<!--Output - "ellohay ymay ameya siay tusay"-->
+<!--Making it better!-->
+<!--There are several more rules to Pig Latin, try incorporating as many as you can into your function.-->
+<!--There are different rules for words that start with vowel sounds or silent letters for example.-->
+<!--Here is a link to an explanation of all the rules.-->
+<!--Also try maintaining capitalization of words that are capitalized in your input string.-->
+<!--Example:-->
+<!--"Hello there" would be "Ellohay heretay"-->
+</body>
+</html>
