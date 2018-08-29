@@ -9,7 +9,6 @@
     <script>
 
         function asciiCodeConversion(stringToConvert) {
-            // const arrayToConvert = stringToConvert.split("");
             const convertedArray = [];
             for (i = 0; i < stringToConvert.length; i++) {
                 const numberToPush = stringToConvert.charCodeAt(i);
@@ -19,12 +18,35 @@
             return convertedString;
         }
 
+        function asciiCodeConversion(stringToConvert) {
+            let convertedString = "";
+            for (let character of stringToConvert) {
+                const numberToPush = character.charCodeAt(0);
+                convertedString += numberToPush;
+            }
+            return convertedString;
+        }
+
         console.log(asciiCodeConversion("Here is a sentence to convert"));
 
-        function asciiCodeConversionWithMap (stringToConvert) {
+        function asciiCodeConversionWithMap(stringToConvert) {
             const convertedArray = []
-            
+            const arrayToConvert = stringToConvert.split("");
+            arrayToConvert.map(number =>
+                convertedArray.push(number.charCodeAt()
+                ));
+            return convertedArray.join("");
         }
+
+        function asciiCodeConversionWithReduce(stringToConvert) {
+            const arrayToConvert = stringToConvert.split("");
+            const convertedString = arrayToConvert.reduce(function (string, character) {
+                string = string + character.charCodeAt(0);
+                return string;
+            }, "")
+            return convertedString;
+        }
+        console.log(asciiCodeConversionWithMap("Here is a sentence to convert"));
 
     </script>
 </head>
