@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script>
+    function permutations(stringToMutate) {
+        debugger;
+        const inputArray = stringToMutate.split("");
+        const results = [];
+        function permute(inputArray, queue) {
+            let current;
+            var queue = queue || "";
+            for (let i = 0; i < inputArray.length; i++) {
+                current = inputArray.splice(i,1);
+                if (inputArray.length === 0) {
+                    results.push(queue+=current[0]);
+                }
+                permute(inputArray.slice(), queue.concat(current));
+                inputArray.splice(i, 0, current[0]);
+            }
+            return results;
+        }
+        return permute(inputArray);
+    }
+
+    console.log(permutations("abc"));
+
+    </script>
+</head>
+<body>
+
+<!-- Given the following function call:
+
+permutations('abc');
+And the resulting output:
+
+["abc", "acb", "bac", "bca", "cab", "cba"];
+Create a function definition that achieves the output with the given input. -->
+</body>
+</html>
