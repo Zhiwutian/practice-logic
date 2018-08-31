@@ -9,11 +9,26 @@
     <script>
 
             function evenOddSeparator (arrayToSeparate) {
-
-                const evenArray
-
-
+                debugger;
+                const evenArray = [];
+                const oddArray = [];
+                for (const i of arrayToSeparate) {
+                    if(typeof i === "number") {
+                        if (i%2 === 0) {
+                           if( evenArray.indexOf(i) > -1) { continue; }
+                            evenArray.push(i);
+                        }else{
+                            if(oddArray.indexOf(i) > -1) { continue; }
+                            oddArray.push(i);
+                        }
+                    }
+                }
+                return {
+                    even: evenArray,
+                    odd: oddArray
+                }
             }
+            console.log ("test", evenOddSeparator([5,3,"2",4,4,2,2,111,"cat",455, 4, false, [], {}, true, 34, 333, 234, 5, 3, 111]));
 
 
     </script>
@@ -21,7 +36,7 @@
 </head>
 <body>
 
-Build a function that takes one array and then sorts it into odd and even numbers
+<!-- Build a function that takes one array and then sorts it into odd and even numbers
 
 Write a function that takes one parameter
 Parameter 1 - an array of anything
@@ -32,6 +47,6 @@ all non-number entities should be ignored
 repeated numbers should not be added twice
 Example:
 evenodd([2,5,1,6,8,2,20,'cat',13,3]);
-Output - { odd: [5, 1, 13, 3], even: [2, 6, 8, 20
+Output - { odd: [5, 1, 13, 3], even: [2, 6, 8, 20 -->
 </body>
 </html>
