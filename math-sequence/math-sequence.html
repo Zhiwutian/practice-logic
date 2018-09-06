@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+    <script>
+            function mathSequences(num1, num2) {
+                const completedSequenceArray = [];
+                const mathToPerform = {
+                    add: "+",
+                    subtract: "-",
+                    multiply: "*",
+                    divide: "/",
+                }
+                for (operator in mathToPerform) {
+                    result = mathHelper(num1, num2, mathToPerform[operator]);
+                    completedSequenceArray.push(`${num1} ${mathToPerform[operator]} ${num2} = ` + result);
+
+                }
+                return completedSequenceArray;
+            }
+            function mathHelper (num1, num2, operand) {
+                switch(operand){
+                case "+":
+                    result = num1 + num2;
+                    return result;
+                    break;
+                case "-":
+                    result = num1 - num2;
+                    return result;
+                    break;
+                case "*":
+                    result = num1 * num2;
+                    return result;
+                    break;
+                case "/":
+                    result = num1 / num2;
+                    return result;
+                    break;
+                default:
+                    return "incorrect operand";
+            }
+            }
+            console.log(mathSequences(2,5));
+    </script>
+</head>
+<body>
+
+<!-- Given the following function call:
+
+math_sequences(2,5);
+And the resulting output:
+
+["2+5=7", "2-5=-3", "2*5=10", "2/5=0.4"];
+Create a function definition that achieves the output with the given input. -->
+
+</body>
+</html>
