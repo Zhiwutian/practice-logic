@@ -15,10 +15,10 @@
                 for (const i of arrayToSeparate) {
                     if(typeof i === "number") {
                         if (i%2 === 0) {
-                           if( evenArray.indexOf(i) > -1) { continue; }
+                           if( evenArray.indexOf(i) === -1)
                             evenArray.push(i);
                         }else{
-                            if(oddArray.indexOf(i) > -1) { continue; }
+                            if(oddArray.indexOf(i) === -1)
                             oddArray.push(i);
                         }
                     }
