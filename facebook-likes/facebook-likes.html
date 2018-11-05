@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+
+
+    <script>
+
+        function faceBookLikes(array) {
+            if (typeof array === "string") {
+                array = array.split(" ")
+            }
+            if(arguments.length > 1) {
+            //    array = Array.prototype.slice.call(arguments);
+               array = Array.from(arguments);
+            }
+            if (!array) {
+                return "No one likes this";
+            }
+            if (array.length > 4) {
+                return `${array[0]}, ${array[1]}, and ${array.length-2} others likes this`
+
+            }
+            switch (array.length) {
+            case 1:
+                return `${array[0]} likes this`
+                break;
+            case 2:
+                return `${array[0]} and ${array[1]} likes this`
+                break;
+            case 3:
+                return `${array[0]}, ${array[1]}, and ${array[2]} like this`
+                break;
+            case 4:
+                return `${array[0]}, ${array[1]}, and ${array.length-2} others likes this`
+                break;
+            default:
+                return `incorrect inpout`
+            }
+
+
+        }
+        const nameArray = ["chet", "terry", "chet", "terry","chet", "terry", "chet", "terry"];
+        const nameString = "chet terry john april";
+       var functionResult =  faceBookLikes(nameString);
+       console.log(functionResult);
+
+
+    </script>
+</head>
+<body>
+
+</body>
+</html>
